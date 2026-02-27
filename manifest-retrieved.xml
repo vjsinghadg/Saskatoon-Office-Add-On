@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xsi:type="MailAppType">
+  <Id>550e8400-e29b-41d4-a716-446655440000</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>ADGSentinel</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="ADGSentinel - Report Phishing"/>
+  <Description DefaultValue="Report phishing, spam, or legitimate emails to your Information Security team"/>
+  <Hosts>
+    <Host xsi:type="MailHost">
+      <DesktopFormFactor>
+        <FunctionFile resid="functionfile"/>
+        <ExtensionPoint xsi:type="MessageReadCommandSurface">
+          <OfficeTab id="TabDefault">
+            <Group id="msgReadGroup">
+              <Label resid="groupLabel"/>
+              <Control xsi:type="Menu" id="reportMenu">
+                <Label resid="menuLabel"/>
+                <Supertip>
+                  <Title resid="menuTitle"/>
+                  <Description resid="menuDescription"/>
+                </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="icon16"/>
+                  <bt:Image size="32" resid="icon32"/>
+                  <bt:Image size="80" resid="icon80"/>
+                </Icon>
+                <Items>
+                  <Item id="reportPhishing">
+                    <Label resid="reportPhishingLabel"/>
+                    <Supertip>
+                      <Title resid="reportPhishingTitle"/>
+                      <Description resid="reportPhishingDescription"/>
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="phishingIcon16"/>
+                      <bt:Image size="32" resid="phishingIcon32"/>
+                      <bt:Image size="80" resid="phishingIcon80"/>
+                    </Icon>
+                    <Action xsi:type="ExecuteFunction">
+                      <FunctionName>reportPhishing</FunctionName>
+                    </Action>
+                  </Item>
+                  <Item id="reportSpam">
+                    <Label resid="reportSpamLabel"/>
+                    <Supertip>
+                      <Title resid="reportSpamTitle"/>
+                      <Description resid="reportSpamDescription"/>
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="spamIcon16"/>
+                      <bt:Image size="32" resid="spamIcon32"/>
+                      <bt:Image size="80" resid="spamIcon80"/>
+                    </Icon>
+                    <Action xsi:type="ExecuteFunction">
+                      <FunctionName>reportSpam</FunctionName>
+                    </Action>
+                  </Item>
+                  <Item id="reportLegitimate">
+                    <Label resid="reportLegitimateLabel"/>
+                    <Supertip>
+                      <Title resid="reportLegitimateTitle"/>
+                      <Description resid="reportLegitimateDescription"/>
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="legitimateIcon16"/>
+                      <bt:Image size="32" resid="legitimateIcon32"/>
+                      <bt:Image size="80" resid="legitimateIcon80"/>
+                    </Icon>
+                    <Action xsi:type="ExecuteFunction">
+                      <FunctionName>reportLegitimate</FunctionName>
+                    </Action>
+                  </Item>
+                </Items>
+              </Control>
+            </Group>
+          </OfficeTab>
+        </ExtensionPoint>
+      </DesktopFormFactor>
+    </Host>
+  </Hosts>
+  <Permissions>Identity</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:bt="http://schemas.microsoft.com/office/appforoffice/1.1"
+                   xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <DesktopFormFactor>
+          <FunctionFile resid="functionfile"/>
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="msgReadGroup">
+                <Label resid="groupLabel"/>
+                <Control xsi:type="Menu" id="reportMenu">
+                  <Label resid="menuLabel"/>
+                  <Supertip>
+                    <Title resid="menuTitle"/>
+                    <Description resid="menuDescription"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
+                  <Items>
+                    <Item id="reportPhishing">
+                      <Label resid="reportPhishingLabel"/>
+                      <Supertip>
+                        <Title resid="reportPhishingTitle"/>
+                        <Description resid="reportPhishingDescription"/>
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="phishingIcon16"/>
+                        <bt:Image size="32" resid="phishingIcon32"/>
+                        <bt:Image size="80" resid="phishingIcon80"/>
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>reportPhishing</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id="reportSpam">
+                      <Label resid="reportSpamLabel"/>
+                      <Supertip>
+                        <Title resid="reportSpamTitle"/>
+                        <Description resid="reportSpamDescription"/>
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="spamIcon16"/>
+                        <bt:Image size="32" resid="spamIcon32"/>
+                        <bt:Image size="80" resid="spamIcon80"/>
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>reportSpam</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id="reportLegitimate">
+                      <Label resid="reportLegitimateLabel"/>
+                      <Supertip>
+                        <Title resid="reportLegitimateTitle"/>
+                        <Description resid="reportLegitimateDescription"/>
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="legitimateIcon16"/>
+                        <bt:Image size="32" resid="legitimateIcon32"/>
+                        <bt:Image size="80" resid="legitimateIcon80"/>
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>reportLegitimate</FunctionName>
+                      </Action>
+                    </Item>
+                  </Items>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/icon-16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/icon-32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/icon-80.png"/>
+        <bt:Image id="phishingIcon16" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/phishing-icon-16.png"/>
+        <bt:Image id="phishingIcon32" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/phishing-icon-32.png"/>
+        <bt:Image id="phishingIcon80" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/phishing-icon-80.png"/>
+        <bt:Image id="spamIcon16" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/spam-icon-16.png"/>
+        <bt:Image id="spamIcon32" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/spam-icon-32.png"/>
+        <bt:Image id="spamIcon80" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/spam-icon-80.png"/>
+        <bt:Image id="legitimateIcon16" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/legitimate-icon-16.png"/>
+        <bt:Image id="legitimateIcon32" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/legitimate-icon-32.png"/>
+        <bt:Image id="legitimateIcon80" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/legitimate-icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="functionfile" DefaultValue="https://saskatoon-office-add-on.vercel.app/function-file/function-file.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="groupLabel" DefaultValue="InfoSec Reports"/>
+        <bt:String id="menuLabel" DefaultValue="Report Email"/>
+        <bt:String id="menuTitle" DefaultValue="Report Email to InfoSec"/>
+        <bt:String id="menuDescription" DefaultValue="Report suspicious emails"/>
+        <bt:String id="reportPhishingLabel" DefaultValue="Report Phishing"/>
+        <bt:String id="reportPhishingTitle" DefaultValue="Report as Phishing"/>
+        <bt:String id="reportSpamLabel" DefaultValue="Report Spam"/>
+        <bt:String id="reportSpamTitle" DefaultValue="Report as Spam"/>
+        <bt:String id="reportLegitimateLabel" DefaultValue="Report as Legitimate"/>
+        <bt:String id="reportLegitimateTitle" DefaultValue="Report as Legitimate"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="reportPhishingDescription" DefaultValue="Report this email as a phishing attempt to the security team"/>
+        <bt:String id="reportSpamDescription" DefaultValue="Report this email as spam or junk mail"/>
+        <bt:String id="reportLegitimateDescription" DefaultValue="Mark this email as legitimate and safe"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
