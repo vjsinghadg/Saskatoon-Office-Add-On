@@ -18,6 +18,8 @@ app.use((req, res, next) => {
 
 // Serve manifest.xml
 app.get('/manifest.xml', (req, res) => {
+
+    console.log(1111);
     try {
         res.setHeader('Content-Type', 'application/xml');
         const manifestPath = path.join(__dirname, 'manifest.xml');
