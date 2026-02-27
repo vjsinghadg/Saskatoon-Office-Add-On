@@ -18,27 +18,71 @@ app.use((req, res, next) => {
 
 // Serve manifest.xml
 app.get('/manifest.xml', (req, res) => {
-
-    console.log(1111);
     try {
         res.setHeader('Content-Type', 'application/xml');
-        const manifestPath = path.join(__dirname, 'manifest.xml');
-        const manifest = fs.readFileSync(manifestPath, 'utf8');
+
+        // Try multiple possible paths
+        const possiblePaths = [
+            path.join(__dirname, 'manifest.xml'),
+            path.join(process.cwd(), 'manifest.xml'),
+            './manifest.xml'
+        ];
+
+        let manifest = null;
+        let foundPath = null;
+
+        for (const manifestPath of possiblePaths) {
+            try {
+                if (fs.existsSync(manifestPath)) {
+                    manifest = fs.readFileSync(manifestPath, 'utf8');
+                    foundPath = manifestPath;
+                    break;
+                }
+            } catch (e) {
+                continue;
+            }
+        }
+
+        if (!manifest) {
+            console.error('Manifest.xml not found in any of:', possiblePaths);
+            console.error('Current working directory:', process.cwd());
+            console.error('__dirname:', __dirname);
+            return res.status(404).json({
+                error: 'Manifest not found',
+                cwd: process.cwd(),
+                dirname: __dirname
+            });
+        }
+
+        console.log(`Serving manifest from: ${foundPath}`);
         res.send(manifest);
     } catch (error) {
         console.error('Error reading manifest:', error);
-        res.status(500).json({ error: 'Failed to load manifest' });
+        res.status(500).json({ error: 'Failed to load manifest', message: error.message });
     }
 });
 
 // Serve function-file.html
 app.get('/function-file/function-file.html', (req, res) => {
     try {
-        const htmlPath = path.join(__dirname, 'function-file.html');
-        res.sendFile(htmlPath);
+        const possiblePaths = [
+            path.join(__dirname, 'function-file.html'),
+            path.join(process.cwd(), 'function-file.html'),
+            './function-file.html'
+        ];
+
+        for (const htmlPath of possiblePaths) {
+            if (fs.existsSync(htmlPath)) {
+                console.log(`Serving function-file.html from: ${htmlPath}`);
+                return res.sendFile(path.resolve(htmlPath));
+            }
+        }
+
+        console.error('function-file.html not found');
+        res.status(404).json({ error: 'Function file not found' });
     } catch (error) {
         console.error('Error reading function-file.html:', error);
-        res.status(500).json({ error: 'Failed to load function file' });
+        res.status(500).json({ error: 'Failed to load function file', message: error.message });
     }
 });
 
@@ -46,11 +90,24 @@ app.get('/function-file/function-file.html', (req, res) => {
 app.get('/scripts/function-file.js', (req, res) => {
     try {
         res.setHeader('Content-Type', 'application/javascript');
-        const jsPath = path.join(__dirname, 'function-file.js');
-        res.sendFile(jsPath);
+        const possiblePaths = [
+            path.join(__dirname, 'function-file.js'),
+            path.join(process.cwd(), 'function-file.js'),
+            './function-file.js'
+        ];
+
+        for (const jsPath of possiblePaths) {
+            if (fs.existsSync(jsPath)) {
+                console.log(`Serving function-file.js from: ${jsPath}`);
+                return res.sendFile(path.resolve(jsPath));
+            }
+        }
+
+        console.error('function-file.js not found');
+        res.status(404).json({ error: 'Script not found' });
     } catch (error) {
         console.error('Error reading function-file.js:', error);
-        res.status(500).json({ error: 'Failed to load script' });
+        res.status(500).json({ error: 'Failed to load script', message: error.message });
     }
 });
 
