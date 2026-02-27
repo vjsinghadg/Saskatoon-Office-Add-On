@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.16",
+  "version": "1.0.0.0",
+  "id": "550e8400-e29b-41d4-a716-446655440000",
+  "packageName": "com.adg.sentinel",
+  "developer": {
+    "name": "ADG Technology",
+    "websiteUrl": "https://adg.ca",
+    "privacyUrl": "https://adg.ca/privacy",
+    "termsOfUseUrl": "https://adg.ca/terms"
+  },
+  "name": {
+    "short": "ADGSentinel Report",
+    "full": "ADGSentinel - Email Phishing & Spam Reporter"
+  },
+  "description": {
+    "short": "Report phishing, spam, or legitimate emails to InfoSec",
+    "full": "ADGSentinel is a secure add-in that allows users to report suspicious emails directly to the Information Security team. Report phishing attempts, spam, or mark emails as legitimate."
+  },
+  "icons": {
+    "outline": "https://saskatoon-office-add-on.vercel.app/assets/icon-16.png",
+    "color": "https://saskatoon-office-add-on.vercel.app/assets/icon-32.png"
+  },
+  "accentColor": "#4472C4",
+  "defaultInstallScope": "personal",
+  "permissions": [
+    "identity",
+    "mailboxes.read"
+  ],
+  "hosts": {
+    "mailaddin": {
+      "desktopFormFactors": ["mail"],
+      "supportsSharedFolders": false
+    }
+  },
+  "extensionPoints": {
+    "mailRead": {
+      "ribbonAction": {
+        "default": "Report Email",
+        "uiLess": false,
+        "commands": [
+          {
+            "id": "reportPhishing",
+            "type": "executeFunction",
+            "label": "Report Phishing",
+            "description": "Report this email as a phishing attempt",
+            "icon": "https://saskatoon-office-add-on.vercel.app/assets/phishing-icon-16.png"
+          },
+          {
+            "id": "reportSpam",
+            "type": "executeFunction",
+            "label": "Report Spam",
+            "description": "Report this email as spam or junk",
+            "icon": "https://saskatoon-office-add-on.vercel.app/assets/spam-icon-16.png"
+          },
+          {
+            "id": "reportLegitimate",
+            "type": "executeFunction",
+            "label": "Report as Legitimate",
+            "description": "Mark this email as legitimate and safe",
+            "icon": "https://saskatoon-office-add-on.vercel.app/assets/legitimate-icon-16.png"
+          }
+        ]
+      }
+    }
+  },
+  "webApplicationInfo": {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "resource": "https://saskatoon-office-add-on.vercel.app"
+  },
+  "configurableProperties": [],
+  "isValidated": true,
+  "supportedLanguages": [
+    "en-US"
+  ]
+}
