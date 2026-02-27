@@ -3,7 +3,7 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:bt="http://schemas.microsoft.com/office/appforoffice/1.1"
            xsi:type="MailAppType">
-  <Id>12345678-1234-1234-1234-123456789012</Id>
+  <Id>550e8400-e29b-41d4-a716-446655440000</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>ADGSentinel</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
