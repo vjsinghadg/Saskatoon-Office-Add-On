@@ -161,21 +161,21 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
-        <bt:Image id="icon32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
-        <bt:Image id="phishingIcon16" DefaultValue="https://localhost:3000/assets/phishing-icon-16.png"/>
-        <bt:Image id="phishingIcon32" DefaultValue="https://localhost:3000/assets/phishing-icon-32.png"/>
-        <bt:Image id="phishingIcon80" DefaultValue="https://localhost:3000/assets/phishing-icon-80.png"/>
-        <bt:Image id="spamIcon16" DefaultValue="https://localhost:3000/assets/spam-icon-16.png"/>
-        <bt:Image id="spamIcon32" DefaultValue="https://localhost:3000/assets/spam-icon-32.png"/>
-        <bt:Image id="spamIcon80" DefaultValue="https://localhost:3000/assets/spam-icon-80.png"/>
-        <bt:Image id="legitimateIcon16" DefaultValue="https://localhost:3000/assets/legitimate-icon-16.png"/>
-        <bt:Image id="legitimateIcon32" DefaultValue="https://localhost:3000/assets/legitimate-icon-32.png"/>
-        <bt:Image id="legitimateIcon80" DefaultValue="https://localhost:3000/assets/legitimate-icon-80.png"/>
+        <bt:Image id="icon16" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/icon-16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/icon-32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/icon-80.png"/>
+        <bt:Image id="phishingIcon16" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/phishing-icon-16.png"/>
+        <bt:Image id="phishingIcon32" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/phishing-icon-32.png"/>
+        <bt:Image id="phishingIcon80" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/phishing-icon-80.png"/>
+        <bt:Image id="spamIcon16" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/spam-icon-16.png"/>
+        <bt:Image id="spamIcon32" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/spam-icon-32.png"/>
+        <bt:Image id="spamIcon80" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/spam-icon-80.png"/>
+        <bt:Image id="legitimateIcon16" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/legitimate-icon-16.png"/>
+        <bt:Image id="legitimateIcon32" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/legitimate-icon-32.png"/>
+        <bt:Image id="legitimateIcon80" DefaultValue="https://saskatoon-office-add-on.vercel.app/assets/legitimate-icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="functionfile" DefaultValue="https://localhost:3000/function-file/function-file.html"/>
+        <bt:Url id="functionfile" DefaultValue="https://saskatoon-office-add-on.vercel.app/function-file/function-file.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="InfoSec"/>
