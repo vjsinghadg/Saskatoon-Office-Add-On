@@ -83,7 +83,8 @@
     </Host>
   </Hosts>
   <Permissions>Identity</Permissions>
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xmlns:bt="http://schemas.microsoft.com/office/appforoffice/1.1"
                    xsi:type="VersionOverridesV1_0">
     <Hosts>
