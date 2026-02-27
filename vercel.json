@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/manifest.xml",
+      "dest": "/api/manifest.xml.js"
+    },
+    {
+      "src": "/function-file/function-file.html",
+      "dest": "/api/function-file-html.js"
+    },
+    {
+      "src": "/scripts/function-file.js",
+      "dest": "/api/function-file-js.js"
+    },
+    {
+      "src": "/api/config",
+      "dest": "/api/config.js"
+    },
+    {
+      "src": "/api/health",
+      "dest": "/api/health.js"
+    },
+    {
+      "src": "/health",
+      "dest": "/api/health.js"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/public/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ],
+  "env": {
+    "INFOSEC_EMAIL": "@infosec_email",
+    "SPAM_REPORT_EMAIL": "@spam_report_email",
+    "SUPPORT_EMAIL": "@support_email",
+    "GOPHISH_URL": "@gophish_url"
+  }
+}
