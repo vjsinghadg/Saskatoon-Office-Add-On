@@ -1,13 +1,11 @@
 {
+  "buildCommand": "npm install",
+  "outputDirectory": "public",
   "version": 2,
   "builds": [
     {
       "src": "api/**/*.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -41,13 +39,8 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/public/$1"
+      "dest": "/public/$1",
+      "status": 404
     }
-  ],
-  "env": {
-    "INFOSEC_EMAIL": "@infosec_email",
-    "SPAM_REPORT_EMAIL": "@spam_report_email",
-    "SUPPORT_EMAIL": "@support_email",
-    "GOPHISH_URL": "@gophish_url"
-  }
+  ]
 }
