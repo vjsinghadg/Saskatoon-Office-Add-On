@@ -7,8 +7,8 @@
   <Version>1.0.0.0</Version>
   <ProviderName>ADGSentinel</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="ADGSentinel Report"/>
-  <Description DefaultValue="Report phishing, spam, or legitimate emails to the Information Security Team"/>
+  <DisplayName DefaultValue="ADGSentinel - Report Phishing"/>
+  <Description DefaultValue="Report phishing, spam, or legitimate emails to your Information Security team"/>
   <Hosts>
     <Host xsi:type="MailHost">
       <DesktopFormFactor>
@@ -18,10 +18,10 @@
             <Group id="msgReadGroup">
               <Label resid="groupLabel"/>
               <Control xsi:type="Menu" id="reportMenu">
-                <Label resid="reportMenuLabel"/>
+                <Label resid="menuLabel"/>
                 <Supertip>
-                  <Title resid="reportMenuTitle"/>
-                  <Description resid="reportMenuDesc"/>
+                  <Title resid="menuTitle"/>
+                  <Description resid="menuDescription"/>
                 </Supertip>
                 <Icon>
                   <bt:Image size="16" resid="icon16"/>
@@ -33,7 +33,7 @@
                     <Label resid="reportPhishingLabel"/>
                     <Supertip>
                       <Title resid="reportPhishingTitle"/>
-                      <Description resid="reportPhishingDesc"/>
+                      <Description resid="reportPhishingDescription"/>
                     </Supertip>
                     <Icon>
                       <bt:Image size="16" resid="phishingIcon16"/>
@@ -48,7 +48,7 @@
                     <Label resid="reportSpamLabel"/>
                     <Supertip>
                       <Title resid="reportSpamTitle"/>
-                      <Description resid="reportSpamDesc"/>
+                      <Description resid="reportSpamDescription"/>
                     </Supertip>
                     <Icon>
                       <bt:Image size="16" resid="spamIcon16"/>
@@ -63,7 +63,7 @@
                     <Label resid="reportLegitimateLabel"/>
                     <Supertip>
                       <Title resid="reportLegitimateTitle"/>
-                      <Description resid="reportLegitimateDesc"/>
+                      <Description resid="reportLegitimateDescription"/>
                     </Supertip>
                     <Icon>
                       <bt:Image size="16" resid="legitimateIcon16"/>
@@ -96,10 +96,10 @@
               <Group id="msgReadGroup">
                 <Label resid="groupLabel"/>
                 <Control xsi:type="Menu" id="reportMenu">
-                  <Label resid="reportMenuLabel"/>
+                  <Label resid="menuLabel"/>
                   <Supertip>
-                    <Title resid="reportMenuTitle"/>
-                    <Description resid="reportMenuDesc"/>
+                    <Title resid="menuTitle"/>
+                    <Description resid="menuDescription"/>
                   </Supertip>
                   <Icon>
                     <bt:Image size="16" resid="icon16"/>
@@ -111,7 +111,7 @@
                       <Label resid="reportPhishingLabel"/>
                       <Supertip>
                         <Title resid="reportPhishingTitle"/>
-                        <Description resid="reportPhishingDesc"/>
+                        <Description resid="reportPhishingDescription"/>
                       </Supertip>
                       <Icon>
                         <bt:Image size="16" resid="phishingIcon16"/>
@@ -126,7 +126,7 @@
                       <Label resid="reportSpamLabel"/>
                       <Supertip>
                         <Title resid="reportSpamTitle"/>
-                        <Description resid="reportSpamDesc"/>
+                        <Description resid="reportSpamDescription"/>
                       </Supertip>
                       <Icon>
                         <bt:Image size="16" resid="spamIcon16"/>
@@ -141,7 +141,7 @@
                       <Label resid="reportLegitimateLabel"/>
                       <Supertip>
                         <Title resid="reportLegitimateTitle"/>
-                        <Description resid="reportLegitimateDesc"/>
+                        <Description resid="reportLegitimateDescription"/>
                       </Supertip>
                       <Icon>
                         <bt:Image size="16" resid="legitimateIcon16"/>
@@ -179,21 +179,21 @@
         <bt:Url id="functionfile" DefaultValue="https://saskatoon-office-add-on.vercel.app/function-file/function-file.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="groupLabel" DefaultValue="InfoSec"/>
-        <bt:String id="reportMenuLabel" DefaultValue="ADGSentinel Report"/>
+        <bt:String id="groupLabel" DefaultValue="InfoSec Reports"/>
+        <bt:String id="menuLabel" DefaultValue="Report Email"/>
+        <bt:String id="menuTitle" DefaultValue="Report Email to InfoSec"/>
+        <bt:String id="menuDescription" DefaultValue="Report suspicious emails"/>
         <bt:String id="reportPhishingLabel" DefaultValue="Report Phishing"/>
+        <bt:String id="reportPhishingTitle" DefaultValue="Report as Phishing"/>
         <bt:String id="reportSpamLabel" DefaultValue="Report Spam"/>
-        <bt:String id="reportLegitimateLabel" DefaultValue="Report Legitimate"/>
+        <bt:String id="reportSpamTitle" DefaultValue="Report as Spam"/>
+        <bt:String id="reportLegitimateLabel" DefaultValue="Report as Legitimate"/>
+        <bt:String id="reportLegitimateTitle" DefaultValue="Report as Legitimate"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="reportMenuTitle" DefaultValue="Report Email"/>
-        <bt:String id="reportMenuDesc" DefaultValue="Report this email to the Information Security Team"/>
-        <bt:String id="reportPhishingTitle" DefaultValue="Report Phishing"/>
-        <bt:String id="reportPhishingDesc" DefaultValue="Report this email as a phishing attempt"/>
-        <bt:String id="reportSpamTitle" DefaultValue="Report Spam"/>
-        <bt:String id="reportSpamDesc" DefaultValue="Report this email as spam/junk"/>
-        <bt:String id="reportLegitimateTitle" DefaultValue="Report Legitimate"/>
-        <bt:String id="reportLegitimateDesc" DefaultValue="Report this email as legitimate and safe"/>
+        <bt:String id="reportPhishingDescription" DefaultValue="Report this email as a phishing attempt to the security team"/>
+        <bt:String id="reportSpamDescription" DefaultValue="Report this email as spam or junk mail"/>
+        <bt:String id="reportLegitimateDescription" DefaultValue="Mark this email as legitimate and safe"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
